@@ -1,0 +1,14 @@
+<div class="order-container">
+  <h2 class="order-container__h2">PEDIDOS NA FILA:</h2>
+</div>
+
+<section class="order-card-container">
+  <ng-template ngFor let-tempOrder [ngForOf]="similarTempOrders" let-i="index">
+    <div (click)="removeTempOrder(tempOrder)" class="order-card-container__card">
+      <ng-template ngFor let-order [ngForOf]="tempOrder" let-i="index">
+          <p *ngIf="i==0" class="order-card-container__card__p__name">{{order.orders_Itens?.orders?.clientName}}</p>
+          <p class="order-card-container__card__p">{{order.orders_Itens?.quantity}}+ {{order.orders_Itens?.food.nameFood}}</p>
+      </ng-template>
+    </div>
+  </ng-template>
+</section>

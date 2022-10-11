@@ -1,0 +1,11 @@
+<div class="container">
+  <h1 mat-dialog-title>Digite seu nome:</h1>
+  <mat-form-field class="input-box" appearance="fill">
+    <mat-label>NOME</mat-label>
+    <input matInput [(ngModel)]="name">
+  </mat-form-field>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close (click)="cancel()">Cancelar</button>
+    <button mat-button mat-dialog-close cdkFocusInitial (click)="confirmName(name)">Confirmar</button>
+  </div>
+</div>

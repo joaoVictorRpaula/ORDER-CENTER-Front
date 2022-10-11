@@ -1,0 +1,81 @@
+.make-order-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+
+    &__h3{
+      font-size: 1.5em;
+    }
+}
+
+.order-card-container{
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  &__card{
+    width: 170px;
+    background-color: rgb(143, 53, 1);
+    border: solid transparent 2px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &__p{
+      margin-top: 10px;
+      color: white;
+      font-weight: 600;
+      font-size: 1em;
+    }
+  }
+
+  &__card:hover{
+    background-color: rgba(143, 53, 1, 0.733);
+  }
+}
+
+
+.order-cart-container{
+  width: 100%;
+  margin:0 auto;
+  position: fixed;
+  bottom: 0;
+  background-color: rgb(143, 53, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__div{
+    position: fixed;
+    right:50px;
+    &__confirm{
+    width: 150px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: rgba(128, 231, 128, 0.808);
+    margin: 0;
+    font-size: 1.4em;
+    cursor: pointer;
+    color: white;
+    }
+
+    &__confirm:hover{
+      background-color: rgba(89, 231, 89, 0.808);
+    }
+  }
+  &__itens{
+
+    &__p{
+      margin-top: 15px;
+      margin-left: 20px;
+      color: white;
+      font-size: 1.4em;
+    }
+  }
+
+}

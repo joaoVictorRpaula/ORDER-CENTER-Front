@@ -1,0 +1,16 @@
+.container{
+  width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input-box{
+  width: 350px;
+}
+
+h2{
+  margin-top: 20px;
+  font-size: 1.4em;
+}

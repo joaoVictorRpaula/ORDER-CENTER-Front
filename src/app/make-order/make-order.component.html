@@ -1,0 +1,23 @@
+<div class="make-order-container">
+  <h3 class="make-order-container__h3">Selecione os itens do seu pedido:</h3>
+</div>
+
+<section class="order-card-container">
+  <ng-template ngFor let-food [ngForOf]="foods" let-i="index">
+    <div (click)="addFood(food)" class="order-card-container__card">
+      <img src="../../assets/img/generic-food.png" width="60px">
+      <p class="order-card-container__card__p">{{food.nameFood}}</p>
+    </div>
+  </ng-template>
+</section>
+
+
+<section class="order-cart-container">
+  <img class="order-cart-container__img" src="../../assets/img/cart.png" width="60px">
+  <ng-template class="order-cart-container__itens" ngFor let-iten [ngForOf]="orderItens" let-i="index">
+    <p class="order-cart-container__itens__p">{{iten.quantity}}+ {{iten.food?.nameFood}} </p>
+  </ng-template>
+  <div class="order-cart-container__div" *ngIf="orderItens.length>0">
+    <button (click)="confirmOrder(orderItens)" class="order-cart-container__div__confirm">CONFIRMAR</button>
+  </div>
+</section>
